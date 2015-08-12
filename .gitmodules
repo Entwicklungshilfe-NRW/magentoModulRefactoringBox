@@ -21,4 +21,19 @@
 	url = git://github.com/puppetlabs/puppetlabs-stdlib
 [submodule "puppet/modules/n98magerun"]
 	path = puppet/modules/n98magerun
-	url = git://github.com/cmuench/puppet-n98magerun
+	url = https://github.com/Entwicklungshilfe-NRW/n98magerun.git
+[submodule "puppet/modules/composer"]
+	path = puppet/modules/composer
+	url = git://github.com/willdurand/puppet-composer.git
+[submodule "puppet/modules/wget"]
+	path = puppet/modules/wget
+	url = git://github.com/maestrodev/puppet-wget.git
+[submodule "puppet/modules/modman"]
+	path = puppet/modules/modman
+	url = https://github.com/DimitriSteyaert/puppet-modman.git
+[submodule "data"]
+	path = data
+	url = https://github.com/Entwicklungshilfe-NRW/magentoMirror.git
+[submodule "modman/gls_unibox"]
+	path = modman/gls_unibox
+	url = https://github.com/Entwicklungshilfe-NRW/magentoRefactoringModule.git

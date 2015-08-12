@@ -1,5 +1,7 @@
 node default {
 
+    include dotdeb
+
     class { "apt":
         always_apt_update => true
     }

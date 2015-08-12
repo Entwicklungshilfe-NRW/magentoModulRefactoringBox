@@ -26,10 +26,10 @@ if [[ ! -f '/.puphpet-stuff/initial-setup-apt-get-update' ]]; then
         apt-get update >/dev/null
         echo 'Finished running initial-setup apt-get update'
         echo 'Running initial-setup apt-get upgrade'
-        apt-get -y upgrade >/dev/null
+        apt-get -q -y -o "Dpkg::Options::=--force-confdef" -o "Dpkg::Options::=--force-confold" upgrade > /dev/null
         echo 'Finished running initial-setup apt-get upgrade'
         echo 'Running initial-setup apt-get dist-upgrade'
-        apt-get -y dist-upgrade >/dev/null
+        apt-get -q -y -o "Dpkg::Options::=--force-confdef" -o "Dpkg::Options::=--force-confold" dist-upgrade > /dev/null
         echo 'Finished running initial-setup apt-get dist-upgrade'
     fi
 
@@ -52,7 +52,7 @@ if [ "${OS}" == 'debian' ] || [ "${OS}" == 'ubuntu' ]; then
     echo 'Finished installing mysql-server'
 
     echo 'Installing php5-cli'
-    apt-get -y install php5-cli >/dev/null
+    apt-get -y install php5-cli php5-mysql php5-mcrypt php5-curl php5-gd >/dev/null
     echo 'Finished installing php5-cli'
 
     echo 'Installing git'

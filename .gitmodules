@@ -43,3 +43,6 @@
 [submodule "modman/ecomdev_phpunit"]
 	path = modman/ecomdev_phpunit
 	url = git://github.com/EcomDev/EcomDev_PHPUnit.git
+[submodule "puppet/modules/dotdeb"]
+	path = puppet/modules/dotdeb
+	url = https://github.com/webvisum/puppet-module-dotdeb.git

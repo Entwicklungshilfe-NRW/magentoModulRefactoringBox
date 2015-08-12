@@ -1,13 +1,6 @@
 Magento-Vagrant-Puppet-Nginx
 ============================
 
-Usage:
-git submodule init
-git submodule update
-vagrant up
-
-visit 127.0.0.1:8080/admin user: admin password: password123
-
 ## Installs
 
 * Magento

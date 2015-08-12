@@ -13,6 +13,17 @@ class magento(
     include magento::php
     include magento::php_fpm
 
+    augeas { "php.ini":
+      require => Class["php"],
+      context => "/files/etc/php.ini/PHP",
+      changes => [
+        'xdebug.profiler_enable=1',
+        'xdebug.remote_enable = on',
+        'xdebug.remote_connect_back = on',
+        'xdebug.idekey = "vagrant"'
+      ];
+    }
+
     class { "magento::n98magerun":
       install_magento     => $install_magento,
       magento_version     => $magento_version,

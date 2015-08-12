@@ -1,6 +1,6 @@
 class magento::php {
     include php
-    php::module { ['curl', 'xdebug', 'mysql',  'gd', 'mcrypt', 'cgi']:
+    php::module { ['curl', 'xdebug', 'mysql',  'gd', 'mcrypt', 'cgi', 'phpunit']:
         require => Class["php::install", "php::config"]
     }
 

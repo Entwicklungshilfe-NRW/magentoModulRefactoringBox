@@ -17,15 +17,15 @@ Vagrant::Config.run do |config|
     s.args = '/vagrant/puppet'
   end
 
-  config.vm.provision :shell do |s|
-     s.path = 'puppet/shell/execute-files.sh'
-     s.args = ['exec-once', 'exec-always']
-   end
-
   config.vm.provision :puppet do |puppet|
      puppet.manifests_path = "puppet/manifests"
      puppet.manifest_file  = "base.pp"
      puppet.module_path    = "puppet/modules"
      puppet.options        = "--verbose --debug"
+  end
+
+  config.vm.provision :shell do |s|
+    s.path = 'puppet/shell/execute-files.sh'
+    s.args = ['exec-once', 'exec-always']
   end
 end

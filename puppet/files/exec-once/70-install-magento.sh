@@ -10,4 +10,4 @@
 #	n98-magerun install --dbHost="localhost" --dbUser="magento" --dbPass="root" --dbName="magento" --installSampleData=no --useDefaultConfigParams=yes --magentoVersionByName="$MAGENTO_VERSION" --installationFolder="$INSTALL_DIR" --baseUrl="http://$DOMAIN/"
 #fi
 
-[ -d /vagrant_data/media ] || (mkdir /vagrant_data/media; chmod 0777 /vagrant_data/media)
+[ -d /vagrant_data/www/media ] || (mkdir /vagrant_data/www/media; chmod 0777 /vagrant_data/www/media)

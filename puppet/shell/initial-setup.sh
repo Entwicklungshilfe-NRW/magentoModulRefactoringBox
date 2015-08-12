@@ -25,6 +25,12 @@ if [[ ! -f '/.puphpet-stuff/initial-setup-apt-get-update' ]]; then
         echo 'Running initial-setup apt-get update'
         apt-get update >/dev/null
         echo 'Finished running initial-setup apt-get update'
+        echo 'Running initial-setup apt-get upgrade'
+        apt-get -y upgrade >/dev/null
+        echo 'Finished running initial-setup apt-get upgrade'
+        echo 'Running initial-setup apt-get dist-upgrade'
+        apt-get -y dist-upgrade >/dev/null
+        echo 'Finished running initial-setup apt-get dist-upgrade'
     fi
 
     touch '/.puphpet-stuff/initial-setup-repo-update'
@@ -44,6 +50,10 @@ if [ "${OS}" == 'debian' ] || [ "${OS}" == 'ubuntu' ]; then
     mysqladmin -u root password root
     mysqladmin -u root -proot create magento_unit_tests
     echo 'Finished installing mysql-server'
+
+    echo 'Installing php5-cli'
+    apt-get -y install php5-cli >/dev/null
+    echo 'Finished installing php5-cli'
 
     echo 'Installing git'
     apt-get -y install git-core >/dev/null

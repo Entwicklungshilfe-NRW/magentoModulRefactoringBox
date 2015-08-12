@@ -6,7 +6,7 @@ if [ "$USER" != "vagrant" ]; then
 	exit
 fi
 
-cd /vagrant_data
+cd /vagrant_data/www
 
 # Some devbox specific Magento settings
 #

@@ -8,7 +8,7 @@ class magento::n98magerun(
     if $install_magento == true {
       class { "::n98magerun::install":
         magento_version     => $magento_version,
-        installation_folder => "/vagrant_data",
+        installation_folder => "/vagrant_data/www",
         db_host             => "localhost",
         db_user             => "root",
         db_pass             => "root",

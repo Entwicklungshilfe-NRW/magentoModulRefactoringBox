@@ -49,6 +49,7 @@ if [ "${OS}" == 'debian' ] || [ "${OS}" == 'ubuntu' ]; then
     apt-get -y install mysql-server >/dev/null
     mysqladmin -u root password root
     mysqladmin -u root -proot create magento_unit_tests
+    mysqladmin -u root -proot create magento
     echo 'Finished installing mysql-server'
 
     echo 'Installing php5-cli'

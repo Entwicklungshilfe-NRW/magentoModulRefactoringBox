@@ -28,11 +28,6 @@ cd /vagrant_data
 modman link .modman/gls_unibox
 modman link .modman/ecomdev_phpunit
 
-# Use n98-magerun to set up Magento (database and local.xml)
-# uses --noDownload because Magento core is deployed with composer.
-# Remove the line if there already is a configured Magento installation
-n98-magerun install --noDownload --dbHost="localhost" --dbUser="magento" --dbPass="root" --dbName="magento" --installSampleData=no --useDefaultConfigParams=yes --magentoVersionByName="$MAGENTO_VERSION" --installationFolder="vagrant_data/www" --baseUrl="http://$DOMAIN/" --forceUseDb="magento"
-
 # Now after Magento has been installed, deploy all additional modules and run setup scripts
 modman deploy-all --force
 n98-magerun sys:setup:run

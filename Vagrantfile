@@ -16,7 +16,10 @@ Vagrant::Config.run do |config|
     s.path = 'puppet/shell/initial-setup.sh'
     s.args = '/vagrant/puppet'
   end
-
+  config.vm.provision :shell do |s|
+    s.path = 'puppet/shell/execute-files.sh'
+    s.args = ['exec-once']
+  end
   config.vm.provision :puppet do |puppet|
      puppet.manifests_path = "puppet/manifests"
      puppet.manifest_file  = "base.pp"
@@ -24,8 +27,4 @@ Vagrant::Config.run do |config|
      puppet.options        = "--verbose --debug"
   end
 
-  config.vm.provision :shell do |s|
-    s.path = 'puppet/shell/execute-files.sh'
-    s.args = ['exec-once', 'exec-always']
-  end
 end

@@ -42,6 +42,7 @@ if [ "${OS}" == 'debian' ] || [ "${OS}" == 'ubuntu' ]; then
     echo 'Installing mysql-server'
     apt-get -y install mysql-server >/dev/null
     mysqladmin -u root password root
+    mysqladmin -u root -proot create magento_unit_tests
     echo 'Finished installing mysql-server'
 
     echo 'Installing git'

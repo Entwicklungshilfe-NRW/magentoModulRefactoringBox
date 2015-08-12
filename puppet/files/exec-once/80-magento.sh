@@ -38,20 +38,5 @@ n98-magerun sys:setup:run
 
 # Set up PHPUnit
 cd /vagrant_data/shell
-mysqladmin -uroot -proot create magento_unit_tests
-php ecomdev-phpunit.php -a install
-php ecomdev-phpunit.php -a magento-config --db-name magento_unit_tests --db-user root --base-url http://$DOMAIN/
-
-# Link local.xml from /etc, this overwrites the generated local.xml
-# from the install script. If it does not exist, the generated file gets copied to /etc first
-# This way you can put the devbox local.xml under version control
-#if [ ! -f "/vagrant/etc/local.xml" ]; then
-#	cp /vagrant_data/app/etc/local.xml /vagrant/etc/local.xml
-#fi
-#if [ ! -f "/vagrant/etc/local.xml.phpunit" ]; then
-#	cp /vagrant_data/app/etc/local.xml.phpunit /vagrant/etc/local.xml.phpunit
-#fi
-#ln -fs /vagrant/etc/local.xml /vagrant_data/app/etc/local.xml
-#ln -fs /vagrant/etc/local.xml.phpunit /vagrant_data/app/etc/local.xml.phpunit
 
 exit

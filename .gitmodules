@@ -37,3 +37,9 @@
 [submodule "modman/gls_unibox"]
 	path = modman/gls_unibox
 	url = https://github.com/Entwicklungshilfe-NRW/magentoRefactoringModule.git
+[submodule "puppet/modules/phpunit"]
+	path = puppet/modules/phpunit
+	url = https://github.com/andrew-kandels/puppet-phpunit.git
+[submodule "modman/ecomdev_phpunit"]
+	path = modman/ecomdev_phpunit
+	url = git://github.com/EcomDev/EcomDev_PHPUnit.git

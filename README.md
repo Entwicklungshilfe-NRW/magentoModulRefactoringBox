@@ -43,8 +43,6 @@ Valid Magento Versions:
 
 ## Frontend
 
-After Installation you should can access the shop frontend over port 8080.
-
 http://127.0.0.1:8080
 
 ## Admin
@@ -61,6 +59,6 @@ To change the admin login you can use n98-magerun.
 
 ``` bash
 vagrant ssh
-cd /vagrant
+cd /vagrant_data
 n98-magerun.phar admin:user:change-password admin mypassword
 ```

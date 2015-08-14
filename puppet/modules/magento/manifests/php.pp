@@ -1,7 +1,7 @@
 class magento::php {
     include php
     include phpunit
-    php::module { ['curl', 'xdebug', 'mysql',  'gd', 'mcrypt', 'cgi']:
+    php::module { ['xdebug', 'cgi']:
         require => Class["php::install", "php::config"]
     }
     php::conf { [ 'pdo' ]:

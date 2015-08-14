@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Importing SQL dump from $DUMP. This will take a while..."
+echo "Importing SQL dump. This will take a while..."
 echo "You can ignore warnings about using a password on the command line interface." >&2
 
 DBH="localhost";

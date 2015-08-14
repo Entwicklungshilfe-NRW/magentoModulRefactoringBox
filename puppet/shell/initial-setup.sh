@@ -52,9 +52,13 @@ if [ "${OS}" == 'debian' ] || [ "${OS}" == 'ubuntu' ]; then
     mysqladmin -u root -proot create magento
     echo 'Finished installing mysql-server'
 
-    echo 'Installing php5-cli'
-    apt-get -y install php5-cli php5-mysql php5-mcrypt php5-curl php5-gd >/dev/null
-    echo 'Finished installing php5-cli'
+    echo 'Installing php5'
+    apt-get -y install php5-cli >/dev/null
+    apt-get -y install php5-mysql >/dev/null
+    apt-get -y install php5-mcrypt >/dev/null
+    apt-get -y install php5-curl  >/dev/null
+    apt-get -y install php5-gd >/dev/null
+    echo 'Finished installing php5'
 
     echo 'Installing git'
     apt-get -y install git-core >/dev/null

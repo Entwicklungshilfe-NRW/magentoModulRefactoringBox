@@ -49,9 +49,7 @@ mysqladmin -u root -proot create magento
 echo 'Finished installing mysql-server'
 
 echo 'Installing php5'
-apt-get -y install php5-cli
-apt-get -y install php5-mysql
-apt-get -y install libt1-5 php5-cgi php5-common php5-fpm php5-gd php5-mcrypt
+apt-get -y install php5-cli php5-mysql libt1-5 php5-cgi php5-common php5-fpm php5-gd php5-mcrypt php5-curl php5-xdebug
 echo 'Finished installing php5'
 
 echo 'Installing git'

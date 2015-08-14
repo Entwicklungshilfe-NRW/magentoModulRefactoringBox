@@ -10,6 +10,6 @@ class magento::php {
     }
     php::conf { [ 'pdo_mysql' ]:
         source  => 'puppet:///modules/magento/etc/php5/conf.d/pdo_mysql.ini',
-        require => [Class["php::install", "php::config"],Exec['install_phpunit_magento']]
+        require => Class["php::install", "php::config"]
     }
 }

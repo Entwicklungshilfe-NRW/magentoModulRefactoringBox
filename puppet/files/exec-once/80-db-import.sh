@@ -7,14 +7,14 @@ DBH="localhost";
 DBU="root"
 DBP="root"
 DBN="magento"
-DUMP="magentoTestWithSampleData.sql"
+DUMP="/vagrant/systemstorage/database/magentoTestWithSampleData.sql"
 
 echo "Import database magento"
 mysql -h ${DBH} -u${DBU} -p${DBP} -e "create database if not exists ${DBN} ";
 mysql -h ${DBH} -u${DBU} -p${DBP} ${DBN} < ${DUMP}
 
 DBN="magento_unit_tests"
-DUMP="magentoUnitTests.sql"
+DUMP="/vagrant/systemstorage/database/magentoUnitTests.sql"
 echo "Import database magento_unit_tests"
 mysql -h ${DBH} -u${DBU} -p${DBP} -e "create database if not exists ${DBN} ";
 mysql -h ${DBH} -u${DBU} -p${DBP} ${DBN} < ${DUMP}

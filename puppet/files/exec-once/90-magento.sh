@@ -11,7 +11,6 @@ if [ "$USER" != "vagrant" ]; then
 	exit
 fi
 
-
 # if we can't find an agent, start one, and restart the script.
 if [ -z "$SSH_AUTH_SOCK" ] ; then
   exec ssh-agent bash -c "ssh-add ~/.ssh/*_id_rsa; $0 $*"

@@ -25,5 +25,8 @@ Vagrant::Config.run do |config|
      puppet.module_path    = "puppet/modules"
      #puppet.options        = "--verbose --debug"
   end
-
+  config.vm.provision 'shell' do |s|
+    s.path = 'puppet/shell/after-setup.sh'
+    s.args = '/vagrant/puppet'
+  end
 end

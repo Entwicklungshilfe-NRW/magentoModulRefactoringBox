@@ -27,6 +27,9 @@ node default {
     #   magento-mirror-1.5.1.0
     #   magento-mirror-1.6.2.0
     #   magento-ce-2.0.0.0-dev
+    class { 'phpunit':
+      phar_uri => 'https://phar.phpunit.de/phpunit-4.8.27.phar'
+    }
     class { "magento":
       install_magento     => false,
       magento_version     => "magento-ce-1.9.1.0",

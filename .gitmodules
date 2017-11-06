@@ -34,9 +34,6 @@
 [submodule "data"]
 	path = data
 	url = https://github.com/Entwicklungshilfe-NRW/magentoMirror.git
-[submodule "modman/gls_unibox"]
-	path = modman/gls_unibox
-	url = https://github.com/Entwicklungshilfe-NRW/magentoRefactoringModule.git
 [submodule "puppet/modules/phpunit"]
 	path = puppet/modules/phpunit
 	url = https://github.com/andrew-kandels/puppet-phpunit.git
@@ -46,3 +43,6 @@
 [submodule "puppet/modules/dotdeb"]
 	path = puppet/modules/dotdeb
 	url = https://github.com/webvisum/puppet-module-dotdeb.git
+[submodule "modman/testing_carrier"]
+	path = modman/testing_carrier
+	url = https://github.com/Entwicklungshilfe-NRW/magentoRefactoringModule.git
